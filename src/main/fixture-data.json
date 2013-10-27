@@ -1,0 +1,245 @@
+[{
+  "name": "Belridge Senior High School",
+  "subjects":[
+    {
+      "name": "Numeracy",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Spelling",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Reading",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    }
+  ]
+},
+{
+  "name": "Duncraig Senior High School",
+  "subjects":[
+    {
+      "name": "Numeracy",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Spelling",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Reading",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    }
+  ]
+},
+{
+  "name": "Craigie Senior High School",
+  "subjects":[
+    {
+      "name": "Numeracy",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Spelling",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Reading",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    }
+  ]
+},
+{
+  "name": "Ocean Reef Senior High School",
+  "subjects":[
+    {
+      "name": "Numeracy",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Spelling",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Reading",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    }
+  ]
+},
+{
+  "name": "Woodvale Secondary College",
+  "subjects":[
+    {
+      "name": "Numeracy",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Spelling",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Reading",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    }
+  ]
+},
+{
+  "name": "Yanchep District High School",
+  "subjects":[
+    {
+      "name": "Numeracy",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Spelling",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Reading",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    }
+  ]
+},
+{
+  "name": "Padbury Senior High School",
+  "subjects":[
+    {
+      "name": "Numeracy",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Spelling",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    },
+    {
+      "name": "Reading",
+      "results":[
+        {"year":2008, "score":589},
+        {"year":2009, "score":890},
+        {"year":2010, "score":769},
+        {"year":2011, "score":854},
+        {"year":2012, "score":658}
+      ]
+    }
+  ]
+}]
