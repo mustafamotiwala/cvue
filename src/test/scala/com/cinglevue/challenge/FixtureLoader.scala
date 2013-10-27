@@ -17,6 +17,6 @@ object FixtureLoader {
     val fixtureFile = this.getClass.getResource("/fixture-data.json")
     implicit val formats = DefaultFormats
     val schools = parse(FileInput(new File(fixtureFile.toURI))).extract[List[School]]
-    println(schools)
+    //TODO: Push to MongoHQ
   }
 }
