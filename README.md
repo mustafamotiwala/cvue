@@ -1,4 +1,4 @@
-# CingleVue Coding Challence #
+# CingleVue Coding Challenge #
 
 ## Build & Run ##
 
