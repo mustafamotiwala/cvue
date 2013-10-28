@@ -44,5 +44,4 @@ class Schools(db:DB) extends CinglevueCodingChallenceStack with JacksonJsonSuppo
       }
     }
   }
-
 }

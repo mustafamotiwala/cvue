@@ -1,0 +1,58 @@
+- attributes("title") = "CingleVue Coding Challenge"
+
+.page-header.row
+  h1= "Schools by Subject"
+  p.lead
+    |Filter the schools by selecting a subject from the dropdown.
+.row
+  #breadcrumb.breadcrumb
+    #nav-search
+      |Filter: 
+      span.dropdown>
+        a.btn.btn-small.dropdown-toggle(data-toggle="dropdown" href="#" name="filterSelect")
+          | Select one...
+          b.icon-caret-down
+        ul.dropdown-menu(role="menu" name="filterSelect")
+          li
+            a(href="#") Numeracy
+          li
+            a(href="#") Reading
+          li
+            a(href="#") Spelling
+.row
+  .span12
+  table.table.table-bordered.table-striped
+    thead
+      tr
+        th
+          span.text-center() School Name
+        th
+          span.text-center() 2008
+        th
+          span.text-center() 2009
+        th
+          span.text-center() 2010
+        th
+          span.text-center() 2011
+        th
+          span.text-center() 2012
+    tbody
+      td
+        span
+          | Test
+      td
+        span
+          | 111
+      td
+        span
+          | 222
+      td
+        span
+          | 333
+      td
+        span
+          | 444
+      td
+        span
+          | 555
+        
