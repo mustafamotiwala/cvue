@@ -3,13 +3,12 @@ import org.json4s._
 import org.json4s.jackson.JsonMethods._
 import java.io.File
 import com.cinglevue.challenge.model._
-import Codecs._
 import com.typesafe.config.ConfigFactory
 import scala.concurrent.ExecutionContext.Implicits.global
 import reactivemongo.api._
 import reactivemongo.core.actors.Authenticate
 import reactivemongo.bson._
-import scala.concurrent.{Await, Future}
+import scala.concurrent.Await
 import scala.util.{Failure, Success}
 import scala.concurrent.duration._
 import reactivemongo.core.commands.SuccessfulAuthentication

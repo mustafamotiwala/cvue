@@ -35,7 +35,9 @@ object Codecs{
       val subjects = bson.getAs[BSONArray]("subjects").get.values.collect {
         case x:BSONDocument => SubjectBSONCodec.read(x)
       }
-      new School(bson.getAs[BSONObjectID]("_id"), bson.getAs[String]("name").get, subjects.toList)
+      val name = bson.getAs[String]("name")
+      if(name.isEmpty) log.warn("The universe is about to collapse...")
+      new School(bson.getAs[BSONObjectID]("_id"), name.get, subjects.toList)
     }
   }
 
@@ -46,17 +48,22 @@ object Codecs{
       val results = bson.getAs[BSONArray]("results").get.values.toList.collect{
         case x:BSONDocument => ResultBSONCodec.read(x)
       }
-      new Subject(bson.getAs[BSONObjectID]("_id"), bson.getAs[String]("name").get, results)
+      val name = bson.getAs[String]("name")
+      if(name.isEmpty) log.warn("The universe is about to collapse...")
+      new Subject(bson.getAs[BSONObjectID]("_id"), name.get, results)
     }
   }
   implicit object ResultBSONCodec extends BSONDocumentReader[Result] with BSONDocumentWriter[Result] {
     def write(t: Result) = t.toBSON
 
     def read(bson: BSONDocument) = {
-      log.info("Parse BSON Document for Result")
+      log.debug("Parse BSON Document for Result")
       val tmp = bson.elements.toList
-      tmp.foreach(e => log.info(s"Value: ${e}"))
-      new Result(bson.getAs[BSONObjectID]("_id"), bson.getAs[Int]("year").get, bson.getAs[Long]("score").get)
+      tmp.foreach(e => log.debug(s"Value: ${e}"))
+      val year = bson.getAs[Int]("year")
+      val score = bson.getAs[BSONNumberLike]("score")
+      if(year.isEmpty || score.isEmpty) log.warn("The universe is about to collapse")
+      new Result(bson.getAs[BSONObjectID]("_id"), year.get, score.get.toLong)
     }
   }
 }
