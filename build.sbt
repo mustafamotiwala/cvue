@@ -35,7 +35,8 @@ libraryDependencies ++= {
 libraryDependencies ++= Seq(
   "org.eclipse.jetty"         %  "jetty-webapp"         % "8.1.10.v20130312"      % "container",
   "org.json4s"                %% "json4s-jackson"       % "3.2.4",
-  "org.mongodb"               %% "casbah"               % "2.6.3",
+  "org.mongodb"               %% "casbah"               % "2.6.3", //Useful for connecting to Mongo from REPL
+  "org.reactivemongo"         %% "reactivemongo"        % "0.9",   //For connecting to Mongo from within App
   "org.eclipse.jetty.orbit"   %  "javax.servlet"        % "3.0.0.v201112011016"   % "container;provided;test" artifacts Artifact("javax.servlet", "jar", "jar"),
   "ch.qos.logback"            %  "logback-classic"      % "1.0.6"                 % "compile"
 )
