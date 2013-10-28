@@ -38,7 +38,7 @@ libraryDependencies ++= Seq(
   "org.mongodb"               %% "casbah"               % "2.6.3", //Useful for connecting to Mongo from REPL
   "org.reactivemongo"         %% "reactivemongo"        % "0.9",   //For connecting to Mongo from within App
   "org.eclipse.jetty.orbit"   %  "javax.servlet"        % "3.0.0.v201112011016"   % "container;provided;test" artifacts Artifact("javax.servlet", "jar", "jar"),
-  "ch.qos.logback"            %  "logback-classic"      % "1.0.6"                 % "compile"
+  "ch.qos.logback"            %  "logback-classic"      % "1.0.11"                % "compile"
 )
 
 port in container.Configuration := 8080

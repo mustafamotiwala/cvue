@@ -1,6 +1,7 @@
 package com.cinglevue.challenge.model
 
 import reactivemongo.bson._
+import org.slf4j.LoggerFactory
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,6 +27,7 @@ case class Result(_id:Option[BSONObjectID], year:Int, score:Long){
 }
 
 object Codecs{
+  private val log = LoggerFactory.getLogger(this.getClass)
   implicit object SchoolBSONCodec extends BSONDocumentReader[School] with BSONDocumentWriter[School] {
     def write(t: School):BSONDocument = t.toBSON
 
@@ -51,6 +53,9 @@ object Codecs{
     def write(t: Result) = t.toBSON
 
     def read(bson: BSONDocument) = {
+      log.info("Parse BSON Document for Result")
+      val tmp = bson.elements.toList
+      tmp.foreach(e => log.info(s"Value: ${e}"))
       new Result(bson.getAs[BSONObjectID]("_id"), bson.getAs[Int]("year").get, bson.getAs[Long]("score").get)
     }
   }
