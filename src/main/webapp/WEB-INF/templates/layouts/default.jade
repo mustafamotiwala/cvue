@@ -2,16 +2,15 @@
 -@ val body: String
 
 !!! 5
-html
+html(lang="en" ng-app="cvueApp")
   head
     meta(charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title= title
     link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css")
-    link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap-theme.min.css")
     link(href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet")
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.7/ng-grid.min.css")
-  body
+  body(ng-controller="cvueController")
     header.container
       .row
         .navbar.navbar-inverse
@@ -25,6 +24,7 @@ html
         != body
     script(type="text/javascript" charset="utf8" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
     script(src="//netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js")
-    script(src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular-resource.min.js")
     script(src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular-resource.min.js")
     script(src="//cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.7/ng-grid.min.js")
+    script(type="text/javascript" src="/assets/js/app.js")

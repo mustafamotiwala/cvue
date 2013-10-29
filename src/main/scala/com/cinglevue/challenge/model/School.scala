@@ -32,7 +32,8 @@ object Codecs{
     def write(t: School):BSONDocument = t.toBSON
 
     def read(bson: BSONDocument):School = {
-      val subjects = bson.getAs[BSONArray]("subjects").get.values.collect {
+      val bsonArray = bson.getAs[BSONArray]("subjects") getOrElse BSONArray()
+      val subjects = bsonArray.values.collect {
         case x:BSONDocument => SubjectBSONCodec.read(x)
       }
       val name = bson.getAs[String]("name")

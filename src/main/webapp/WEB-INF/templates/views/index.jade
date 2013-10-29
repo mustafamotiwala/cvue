@@ -1,7 +1,7 @@
 - attributes("title") = "CingleVue Coding Challenge"
 
 .page-header.row
-  h1= "Schools by Subject"
+  h1= "CingleVue - SchoolVue App."
   p.lead
     |Filter the schools by selecting a subject from the dropdown.
 .row
@@ -9,16 +9,12 @@
     #nav-search
       |Filter: 
       span.dropdown>
-        a.btn.btn-small.dropdown-toggle(data-toggle="dropdown" href="#" name="filterSelect")
-          | Select one...
+        a.btn.btn-small.btn-info.dropdown-toggle(data-toggle="dropdown" href="#" name="filterSelect" ng-model="subject")
+          | {{subject | subjectFilter}}
           b.icon-caret-down
         ul.dropdown-menu(role="menu" name="filterSelect")
-          li
-            a(href="#") Numeracy
-          li
-            a(href="#") Reading
-          li
-            a(href="#") Spelling
+          li(ng-repeat="subject in subjects")
+            a(href="" ng-click="setSubject(subject.name)") {{subject.name}}
 .row
   .span12
   table.table.table-bordered.table-striped
@@ -37,22 +33,21 @@
         th
           span.text-center() 2012
     tbody
-      td
-        span
-          | Test
-      td
-        span
-          | 111
-      td
-        span
-          | 222
-      td
-        span
-          | 333
-      td
-        span
-          | 444
-      td
-        span
-          | 555
-        
+      tr(ng-repeat="school in schools")
+        td
+          | {{school.name}}
+        td
+          span
+            | {{school.subjects[0].results['2008']}}
+        td
+          span
+            | {{school.subjects[0].results['2009']}}
+        td
+          span
+            | {{school.subjects[0].results['2010']}}
+        td
+          span
+            | {{school.subjects[0].results['2011']}}
+        td
+          span
+            | {{school.subjects[0].results['2012']}}
