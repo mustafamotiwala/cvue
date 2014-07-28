@@ -4,7 +4,7 @@ import org.scalatra._
 import javax.servlet.ServletContext
 import org.slf4j.LoggerFactory
 import reactivemongo.api.MongoDriver
-import reactivemongo.core.actors.Authenticate
+import reactivemongo.core.nodeset.Authenticate
 import scala.concurrent.ExecutionContext.Implicits.global
 import reactivemongo.core.commands.SuccessfulAuthentication
 import scala.concurrent.Await
@@ -19,18 +19,20 @@ class ScalatraBootstrap extends LifeCycle {
     val dbName = config getString "com.cinglevue.challenge.db.name"
     val dbUsername = config getString "com.cinglevue.challenge.db.user"
     val dbPassword = config getString "com.cinglevue.challenge.db.password"
+    val credentials = List(Authenticate(dbName, dbUsername, dbPassword))
 
     val driver = new MongoDriver
-    val connection = driver.connection(List(dbServer))
-    val authTimeout = 5.seconds
-    val authFuture = connection.authenticate(dbName, dbUsername, dbPassword)(authTimeout)
-    //Possible bug in ReactiveMongo: The future completes when even a single channel authenticates.
+    val connection = driver.connection(List(dbServer), authentications = credentials)
+    // val authTimeout = 5.seconds
+    // val authFuture = connection.authenticate(dbName, dbUsername, dbPassword)(authTimeout)
+    // Possible bug in ReactiveMongo: The future completes when even a single channel authenticates.
     // Need to explore further
-    authFuture.onComplete( _ match {
-      case s:Success[SuccessfulAuthentication] => log.info("Authentication successful")
-      case x:Failure[SuccessfulAuthentication] => log.error("Authentication failed: ", x.exception)
-    })
-    Await.result(authFuture, authTimeout)
-    context mount(new Schools(connection(dbName)), "/*")
+    // authFuture.onComplete( _ match {
+    //   case s:Success[SuccessfulAuthentication] => log.info("Authentication successful")
+    //   case x:Failure[SuccessfulAuthentication] => log.error("Authentication failed: ", x.exception)
+    // })
+    // Await.result(authFuture, authTimeout)
+    context mount(new Schools(connection(dbName)), "/")
+    log info "Servlet Schools mounted on /"
   }
 }

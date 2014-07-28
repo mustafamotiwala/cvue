@@ -17,13 +17,15 @@ class Schools(db:DB) extends CinglevueCodingChallenceStack with JacksonJsonSuppo
   val log = LoggerFactory.getLogger(this.getClass)
   protected implicit val jsonFormats = DefaultFormats.withBigDecimal
   get("/") {
-    redirect(url("index"))
+    contentType = formats ("json")
+    "message" -> "Hello!"
+    /*redirect(url("index"))
     <html>
       <body>
         <h1>Hello, world!</h1>
         Say <a href="hello-scalate">hello to Scalate</a>.
       </body>
-    </html>
+    </html>*/
   }
 
   get("/list/:subject") {
@@ -35,7 +37,7 @@ class Schools(db:DB) extends CinglevueCodingChallenceStack with JacksonJsonSuppo
         val query = BSONDocument()
         val projection = BSONDocument("subjects" -> BSONDocument("$elemMatch"->BSONDocument("name" -> BSONRegex(params("subject"),"i"))), "name"->1)
         val cursor = collection.find(query, projection).cursor[School]
-        val futureResultSet = cursor.toList
+        val futureResultSet = cursor.collect[List]()
         // Simplyfy the object model for presentation:
         val futureViewModel =  futureResultSet.map(_.map(buildView))
         // Every once in a while, due to network hiccup, reactive throws an exception.
